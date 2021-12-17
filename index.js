@@ -10,6 +10,10 @@ function renderPropsToString(props) {
     return str;
 }
 
+function renderComponentString(subModuleName, props) {
+    return `'<${subModuleName ? subModuleName : "MyReactComponent"} ${renderPropsToString(props)}/>'`;
+}
+
 function generateLink({ packageName, subModuleName, props }) {
 
     const packageVersion = "latest";
@@ -21,10 +25,9 @@ function generateLink({ packageName, subModuleName, props }) {
 import React from "react";
 import ReactDOM from "react-dom";
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from "react-live";
-import reactElementToJSXString from "react-element-to-jsx-string";
+
 import ${subModuleName ? "{ " + subModuleName + " } " : "MyReactComponent"} from "${packageName}";
-const component = <${subModuleName ? subModuleName : "MyReactComponent"} ${renderPropsToString(props)}/>;
-const code = reactElementToJSXString(component);
+const code = ${renderComponentString(subModuleName, props)};
 const componentClassName = code.split(' ')[0].replace('<', '');
 const scope = { [componentClassName]: ${subModuleName ? subModuleName : "MyReactComponent"} };
 function App() {
@@ -78,7 +81,7 @@ exports.handler = (event, context, callback) => {
 
     let props = {};
 
-    Object.keys(event.queryStringParameters).filter(key => key !== "packageName").forEach(key => {
+    Object.keys(event.queryStringParameters).filter(key => key !== "packageName" && key !== "subModuleName").forEach(key => {
         props[key] = event.queryStringParameters[key];
     });
 
