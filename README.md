@@ -19,3 +19,4 @@ example:  https://namb9xax8a.execute-api.us-east-1.amazonaws.com/default/generat
 TODOs:
 1. Add support for nested structure
 2. Add support for embedding css/ scss
+3. Add support for github public repository 
