@@ -20,3 +20,4 @@ TODOs:
 1. Add support for nested structure
 2. Add support for embedding css/ scss
 3. Add support for github public repository 
+4. Add a user interface to generate such url
