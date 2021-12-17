@@ -1,5 +1,5 @@
 # generate-react-live-url
-Generate a url by a public npm package name to live preview a custom react component in codesandbox
+Generate a url by a react component's public npm package name to live preview a custom react component in codesandbox
 <br/>
 <br/>
 Example: react-component-es6-lib-example
