@@ -8,3 +8,14 @@ https://www.npmjs.com/package/react-component-es6-lib-example
 <br/>
 Demo:
 https://namb9xax8a.execute-api.us-east-1.amazonaws.com/default/generate-react-live-url?packageName=react-component-es6-lib-example
+
+Features:
+1. React component's props embedded in url
+example:  https://namb9xax8a.execute-api.us-east-1.amazonaws.com/default/generate-react-live-url?packageName=react-component-es6-lib-example&title=Test
+
+2. Support for submodules
+example:  https://namb9xax8a.execute-api.us-east-1.amazonaws.com/default/generate-react-live-url?packageName=react-social-icons&subModuleName=SocialIcon&url=https://twitter.com/jaketrent
+
+TODOs:
+1. Add support for nested structure
+2. Add support for embedding css/ scss
