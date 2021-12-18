@@ -22,3 +22,5 @@ TODOs:
 3. Add support for github public repository 
 4. Add a user interface to generate such url
 5. List all props of a react component
+6. Auto detect the component's name and use that in the generated code
+7. Auto detect props required to initiate the component
