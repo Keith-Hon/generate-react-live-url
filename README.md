@@ -24,3 +24,4 @@ TODOs:
 5. List all props of a react component
 6. Auto detect the component's name and use that in the generated code
 7. Auto detect props required to initiate the component
+8. Support for nested props
